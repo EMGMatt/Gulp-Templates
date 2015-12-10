@@ -1,0 +1,14 @@
+{
+  "name": "gulp-testing",
+  "version": "0.0.1",
+  "description": "My Gulpfile Template and testing ground",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Matt Urenovich",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.0"
+  }
+}
