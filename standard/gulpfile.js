@@ -24,5 +24,21 @@ gulp.task('sass', function() {
   .pipe(browserSync.stream());
 });
 
+// Concat scripts & generate sourcemaps
+gulp.task('concatScripts', function() {
+  return gulp.src('./js/**/*.js')
+  .pipe($.sourcemaps.init())
+    .pipe($.concat('combined.js'))
+    .pipe($.sourcemaps.write());
+    .pipe(gulp.dest('./js/dist/'));
+});
+
+// Minify after Concat
+gulp.task('minify', function() {
+  return gulp.src('./js/dist/combined.js')
+  .pipe($.uglify())
+  .pipe(gulp.dest('./js/dist/combined.min.js'));
+});
+
 // Default Task
-gulp.task('default', ['serve']);
+gulp.task('default', ['concatScripts', 'serve']);
