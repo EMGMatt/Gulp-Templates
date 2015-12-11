@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Matt Urenovich",
-  "license": "ISC",
+  "license": "GNU v2.0",
   "devDependencies": {
     "browser-sync": "^2.10.0",
     "gulp": "^3.9.0",
